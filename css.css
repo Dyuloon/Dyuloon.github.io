@@ -1,1 +1,8 @@
 
+div {
+		width: 510px;
+		height: 500px;
+		border: 15px solid;
+		padding: 25px;
+		margin: 25px;
+	}
