@@ -2,45 +2,45 @@
 <html>  
 <head>  
     <meta charset="UTF-8">  
-    <title>小人举国旗</title>  
+    <title>五星红旗</title>  
     <style type="text/css">  
-        #canvas{  
-            display: block;  
-            margin: 50px auto;  
-            box-shadow: 4px 4px 5px #8e8e8e;  
-            -webkit-box-shadow: 8px 8px 5px #8e8e8e;  
-        }  
+		#face{
+			float:left;
+		}
+		#dc{
+			width: 1000px;
+			height:500px
+			margin: 0 auto;
+			border:1px solid #000000;
+		}
     </style>  
-</head>  
-<body>  
-	
-	<div>
-	<canvas id="canvas" width = 288 height = 192></canvas>  
-	<div>
-		<svg width="100%" height="100%" version="1.1"
-			xmlns="http://www.w3.org/2000/svg">
-		<circle cx="150" cy="120" r="100" stroke="black" 
-			fill="yellow" stroke-width="1" />
-		<ellipse cx="120" cy="90" rx="12" ry="20" />
-		<ellipse cx="180" cy="90" rx="12" ry="20" />
-		<path stroke-width="2" stroke="black" 
-			d="m90 150 q60 70 120 0 q-60 60 -120 0 ">
-		</svg>
-	</div>
 	<script>  
 		window.onload = function () {  
 			var c = document.getElementById("canvas");  
 			var ctx = c.getContext("2d")  
 			//绘制背景  
 			ctx.fillStyle = "red";  
-			ctx.fillRect(0, 0, 288, 192); 
+			ctx.fillRect(100, 0, 288, 192); 
+			//旗杆
+			ctx.moveTo(100,0);
+			ctx.lineTo(100,400);
+			ctx.stroke();
+			//上手臂
+			ctx.moveTo(100,200);
+			ctx.lineTo(0,240);
+			ctx.stroke();
+			//下手臂
+			ctx.moveTo(100,300);
+			ctx.lineTo(0,300);
+			ctx.stroke();
 			//大星星
-			drawStar(ctx, 12, 30, 48, 48, 0);  
+			drawStar(ctx, 12, 30, 148, 48, 0);  
 			//四个小星星  
-			drawStar(ctx, 4, 10, 96, 19,18);  
-			drawStar(ctx, 4, 10, 115, 38, 126);  
-			drawStar(ctx, 4, 10, 115, 68, 72);  
-			drawStar(ctx, 4, 10, 96, 96, 180);  
+			drawStar(ctx, 4, 10, 196, 19,18);  
+			drawStar(ctx, 4, 10, 215, 38, 126);  
+			drawStar(ctx, 4, 10, 215, 68, 72);  
+			drawStar(ctx, 4, 10, 196, 96, 180);
+						
 		}  
 		//绘制星星的路径
 		function drawStar(ctx,r,R,x,y,rote) {  
@@ -55,7 +55,43 @@
 			ctx.fillStyle = "yellow";  
 			ctx.fill();  
 		}  
+		
+
+ 
+			
 	 </script>
+</head>
+<BODY align="center">
+	<div id="face">
+	<svg width="250px" height="750px" version="1.1"
+			xmlns="http://www.w3.org/2000/svg">
+			
+			<line x1="150" y1="100" x2="150" y2="400" stroke="black"/>
+			
+			<line x1="150" y1="250" x2="250" y2="240" stroke="black"/>
+			
+			<line x1="150" y1="250" x2="250" y2="300" stroke="black"/>
+			
+			<line x1="150" y1="400" x2="300" y2="600" stroke="black"/>
+			
+			<line x1="150" y1="400" x2="100" y2="450" stroke="black"/>
+			<line x1="100" y1="450" x2="35" y2="390" stroke="black"/>
+			
+		<circle cx="150" cy="120" r="100" stroke="black" 
+			fill="yellow" stroke-width="1" />
+		<ellipse cx="120" cy="90" rx="12" ry="20" />
+		<ellipse cx="180" cy="90" rx="12" ry="20" />
+		<path stroke-width="2" stroke="black" 
+			d="m90 150 q60 70 120 0 q-60 60 -120 0 ">
+		
+		
+	</svg>
 	</div>
-</body>  
-</html>  
+	<div id="face">
+	<canvas id="canvas" width = 450 height = 750></canvas>
+	</div>
+	<div id="face">
+	<canvas id="canvas01" width = 450 height = 750 class="border:1px solid #000000;"></canvas>
+	</div>
+</BODY>
+</HTML> 
