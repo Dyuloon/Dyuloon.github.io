@@ -1,0 +1,10 @@
+<?php
+$id=rand(1,6);
+$image[1]='puke/1.jpg';
+$image[2]='puke/2.jpg';
+$image[3]='puke/3.jpg';
+$image[4]='puke/4.jpg';
+$image[5]='puke/5.jpg';
+$image[6]='puke/6.jpg';
+header("location:$image[$id]");
+?>
