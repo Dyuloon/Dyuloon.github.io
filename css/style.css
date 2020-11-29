@@ -1,11 +1,9 @@
 
-div {
-		width: 510px;
-		height: 500px;
-		border: 15px solid;
-		padding: 25px;
-		margin: 0 auto;
-		background-color:white;
-	}
-
+/*改变鼠标样式*/
+body {
+	cursor: url(https://dyuloon.github.io/img/key/1.png),default
+}
+a:hover {
+	cursor: url(https://dyuloon.github.io/img/key/2.png),pointer
+}
 
