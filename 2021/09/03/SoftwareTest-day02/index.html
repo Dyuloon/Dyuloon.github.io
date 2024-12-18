@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<meta name="baidu-site-verification" content="codeva-N9gQyNFevr" />
+<meta name="keywords" content="dyuloon,段宇龙,段宇龙的博客" />
+<meta name="author" contect="段宇龙">
+<meta name="robots" contect="all">
+<meta name="description" contect="段宇龙的博客">
+
+<script src="/live2d-widget/autoload.js"></script>
+
+  <script type="text/javascript">
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener('visibilitychange',
+  function() {
+    if (document.hidden) {
+        document.title = '再见了~~ ╥﹏╥... ';
+        clearTimeout(titleTime);
+    } else {
+        document.title = '欢迎回来 ヾ(≧▽≦*)o';
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        },
+        2000);
+    }
+  });
+  </script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"dyuloon.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="软件测试简介软件测试概述使用人工或自动化手段运行或测定某个系统的过程，目的在于检验它是否满足规定的需求或是弄清楚预期结果与实际结果之间的差异 软件测试的发展（1）最早期：软件调试（2）20世纪50年代：专门的软件测试（3）20实际80年代：第一次定义、形成专门的学科（4）20实际90年代：与开发融合">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试-第二天">
+<meta property="og:url" content="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/index.html">
+<meta property="og:site_name" content="DyuLoon的博客">
+<meta property="og:description" content="软件测试简介软件测试概述使用人工或自动化手段运行或测定某个系统的过程，目的在于检验它是否满足规定的需求或是弄清楚预期结果与实际结果之间的差异 软件测试的发展（1）最早期：软件调试（2）20世纪50年代：专门的软件测试（3）20实际80年代：第一次定义、形成专门的学科（4）20实际90年代：与开发融合">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/01.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/02.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/03.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/04.png">
+<meta property="article:published_time" content="2021-09-03T06:06:36.000Z">
+<meta property="article:modified_time" content="2024-12-18T02:14:00.481Z">
+<meta property="article:author" content="DyuLoon">
+<meta property="article:tag" content="软件概述">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/01.png">
+
+<link rel="canonical" href="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>软件测试-第二天 | DyuLoon的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DyuLoon的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-friendlink">
+
+    <a href="/friendlink/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-message">
+
+    <a href="/message/" rel="section"><i class="fa fa-book fa-fw"></i>留言</a>
+
+  </li>
+        <li class="menu-item menu-item-minigames">
+
+    <a href="/miniGames" rel="section"><i class="fa fa-gamepad fa-fw"></i>小游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-other">
+
+    <a href="/other" rel="section"><i class="fa fa-cubes fa-fw"></i>其他</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dyuloon.github.io/2021/09/03/SoftwareTest-day02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/cat.jpg">
+      <meta itemprop="name" content="DyuLoon">
+      <meta itemprop="description" content="从现在开始，一定要不断努力">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DyuLoon的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          软件测试-第二天
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-03 14:06:36" itemprop="dateCreated datePublished" datetime="2021-09-03T14:06:36+08:00">2021-09-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-12-18 10:14:00" itemprop="dateModified" datetime="2024-12-18T10:14:00+08:00">2024-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/09/03/SoftwareTest-day02/" class="post-meta-item leancloud_visitors" data-flag-title="软件测试-第二天" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/09/03/SoftwareTest-day02/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/03/SoftwareTest-day02/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="软件测试简介"><a href="#软件测试简介" class="headerlink" title="软件测试简介"></a>软件测试简介</h2><h3 id="软件测试概述"><a href="#软件测试概述" class="headerlink" title="软件测试概述"></a>软件测试概述</h3><p>使用人工或自动化手段运行或测定某个系统的过程，目的在于检验它是否满足规定的需求或是弄清楚预期结果与实际结果之间的差异</p>
+<h3 id="软件测试的发展"><a href="#软件测试的发展" class="headerlink" title="软件测试的发展"></a>软件测试的发展</h3><p>（1）最早期：软件调试<br>（2）20世纪50年代：专门的软件测试<br>（3）20实际80年代：第一次定义、形成专门的学科<br>（4）20实际90年代：与开发融合</p>
+<a id="more"></a>
+
+<h3 id="软件测试的目的"><a href="#软件测试的目的" class="headerlink" title="软件测试的目的"></a>软件测试的目的</h3><p>（1）对于软件开发来说：软件测试通过找到的问题缺陷帮助开发人员找到开发过程中存在的问题，包括软件开发的模式，工具，技术等方面存在的问题与不足<br>（2）对于软件测试来说，是用最少的人力、物理、时间等找到软件中蕴藏的缺陷，保证软件的质量，也能为以后软件测试积累丰富的经验<br>（3）对于客户需求来说，软件测试能够检验软件是否符合客户需求，对软件质量进行评估和度量，为客户评审软件提供有力的依据</p>
+<h2 id="软件测试的分类"><a href="#软件测试的分类" class="headerlink" title="软件测试的分类"></a>软件测试的分类</h2><h3 id="测试阶段分类"><a href="#测试阶段分类" class="headerlink" title="测试阶段分类"></a>测试阶段分类</h3><p>（1）单元测试：验证软件单元是否符合软件需求与设计，开发人员自测<br>（2）冒烟测试：软件构建版本建立后，对系统的基本功能进行简单的测试，这种测试重点验证的是程序的主要功能，而不会对具体功能进行深入测试<br>（3）集成测试：冒烟测试之后，将已经测试过的软件单元组合在一起测试他们之间的接口，用于验证软件是否满足设计需求<br>（4）确认测试：<br>（5）系统测试：将经过测试的软件在实际环境中运行，并与其他系统的成分（如数据库、硬件和操作人员等）组合在一起进行测试。<br>（6）验收测试：主要是对软件产品说明进行验证，逐行逐字的按照说明书的描述对软件产品进行测试，确保其符合客户的各项要求。</p>
+<h3 id="按照测试技术分类"><a href="#按照测试技术分类" class="headerlink" title="按照测试技术分类"></a>按照测试技术分类</h3><p>（1）黑盒测试（功能测试）：把软件（程序）当作一个有输入输出的黑匣子，它把程序当作一个输入域到输出域的映射，只要输入的数据能输出预期的结果即可，不必关心程序内部是怎么样实现的。<br><img src="01.png" alt="黑盒测试"></p>
+<p>（2）白盒测试（透明测试）：测试人员了解软件程序的逻辑结构、路径与运行过程，在测试时，按照程序的执行路径得出结果。白盒测试就是把软件（程序）当作一个透明的盒子，测试人员清楚的知道从输入到输出的每一步过程。<br><img src="02.png" alt="白盒测试"></p>
+<h3 id="按照软件质量特性分类"><a href="#按照软件质量特性分类" class="headerlink" title="按照软件质量特性分类"></a>按照软件质量特性分类</h3><p>（1）功能测试：测试软件的功能书否能满足客户的要求，包括准确性、易用性、适合性、互操作性。<br>（2）性能测试：测试软件的性能是否满足客户的需求、性能测试包括负载测试、压力测试、兼容性测试、可移植性测试和健壮性测试等。</p>
+<h3 id="按照自动化程度分类"><a href="#按照自动化程度分类" class="headerlink" title="按照自动化程度分类"></a>按照自动化程度分类</h3><p>（1）手工测试：测试人员一条一条的执行代码完成测试工作，费时费力且很难保证测试效果。<br>（2）自动化测试：借助脚本、自动化测试工具等完成相应的测试工作，他也需要人工的参与，但是它可以将要执行的测试代码或流程写成脚本，执行脚本完成整个测试工作。</p>
+<h3 id="按照测试项目分类"><a href="#按照测试项目分类" class="headerlink" title="按照测试项目分类"></a>按照测试项目分类</h3><p>（1）界面类测试：验证软件界面是否符合客户需求。UI测试（自动化）<br>（2）安全性测试：试软件在没有授权的内部或外部用户的攻击或恶意破坏时如何进行处理，是否能保证软件与数据的安全。<br>（3）文档测试：以需求分析、软件设计、用户手册、安装手册为主，主要验证文档说明与实际软件之间是否存在差异。</p>
+<h3 id="其他分类"><a href="#其他分类" class="headerlink" title="其他分类"></a>其他分类</h3><p>（1） α测试：软件上线之前进行的版本测试。由开发人员和测试人员或者用户协助进行测试。测试人员记录使用过程中出现的错误与问题，整个测试过程是可控的。<br>（2）β测试：软件上线之后进行的版本测试。由用户在使用过程中发现错误与问题并进行记录，然后反馈给开发人员进行修复。<br>（3）回归测试：对修改后的程序重新进行测试确认原有的缺陷已经消除并且没有引入新的去恶心啊，这个重新测试的过程就叫做回归测试。<br>（4）随机测试：没有测试用例、检查列表、脚本或者指令的测试，它主要是根据测试人员的经验对软件进行功能和性能抽查</p>
+<h2 id="软件测试模型"><a href="#软件测试模型" class="headerlink" title="软件测试模型"></a>软件测试模型</h2><h3 id="V模型"><a href="#V模型" class="headerlink" title="V模型"></a>V模型</h3><p><img src="03.png" alt="v模型"></p>
+<h3 id="W模型"><a href="#W模型" class="headerlink" title="W模型"></a>W模型</h3><p><img src="04.png" alt="w模型"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%A6%82%E8%BF%B0/" rel="tag"><i class="fa fa-tag"></i> 软件概述</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/08/31/SoftwareTest-day01/" rel="prev" title="软件测试-第一天">
+      <i class="fa fa-chevron-left"></i> 软件测试-第一天
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/07/SoftwareTest-day03/" rel="next" title="软件测试-白盒测试">
+      软件测试-白盒测试 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">软件测试简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">软件测试概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E5%8F%91%E5%B1%95"><span class="nav-number">1.2.</span> <span class="nav-text">软件测试的发展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-number">1.3.</span> <span class="nav-text">软件测试的目的</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">软件测试的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E9%98%B6%E6%AE%B5%E5%88%86%E7%B1%BB"><span class="nav-number">2.1.</span> <span class="nav-text">测试阶段分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E7%85%A7%E6%B5%8B%E8%AF%95%E6%8A%80%E6%9C%AF%E5%88%86%E7%B1%BB"><span class="nav-number">2.2.</span> <span class="nav-text">按照测试技术分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E7%85%A7%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%89%B9%E6%80%A7%E5%88%86%E7%B1%BB"><span class="nav-number">2.3.</span> <span class="nav-text">按照软件质量特性分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E7%85%A7%E8%87%AA%E5%8A%A8%E5%8C%96%E7%A8%8B%E5%BA%A6%E5%88%86%E7%B1%BB"><span class="nav-number">2.4.</span> <span class="nav-text">按照自动化程度分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E7%85%A7%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%88%86%E7%B1%BB"><span class="nav-number">2.5.</span> <span class="nav-text">按照测试项目分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%88%86%E7%B1%BB"><span class="nav-number">2.6.</span> <span class="nav-text">其他分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">软件测试模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#V%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.1.</span> <span class="nav-text">V模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#W%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.2.</span> <span class="nav-text">W模型</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="DyuLoon"
+      src="/imgs/cat.jpg">
+  <p class="site-author-name" itemprop="name">DyuLoon</p>
+  <div class="site-description" itemprop="description">从现在开始，一定要不断努力</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dyuloon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dyuloon" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2189925681@qq.com" title="E-Mail → mailto:2189925681@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/74103225" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;74103225" rel="noopener" target="_blank"><i class="fa fa-tv fa-fw"></i>bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/6481278726/profile?rightmod=1&wvr=6&mod=personinfo" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;6481278726&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://user.qzone.qq.com/2189925681" title="QQ → https:&#x2F;&#x2F;user.qzone.qq.com&#x2F;2189925681" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DyuLoon</span>
+</div>
+
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<br><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人</span>
+
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("12/09/2020");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'FGmPDAgxFQ57dgkJYkzLf2oO-MdYXbMMI',
+      appKey     : 'QDURvlpgsx2E8seSNfucz1AS',
+      placeholder: "快，留个言再走吧",
+      avatar     : 'robohash',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

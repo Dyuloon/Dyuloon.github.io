@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<meta name="baidu-site-verification" content="codeva-N9gQyNFevr" />
+<meta name="keywords" content="dyuloon,段宇龙,段宇龙的博客" />
+<meta name="author" contect="段宇龙">
+<meta name="robots" contect="all">
+<meta name="description" contect="段宇龙的博客">
+
+<script src="/live2d-widget/autoload.js"></script>
+
+  <script type="text/javascript">
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener('visibilitychange',
+  function() {
+    if (document.hidden) {
+        document.title = '再见了~~ ╥﹏╥... ';
+        clearTimeout(titleTime);
+    } else {
+        document.title = '欢迎回来 ヾ(≧▽≦*)o';
+        titleTime = setTimeout(function() {
+            document.title = OriginTitile;
+        },
+        2000);
+    }
+  });
+  </script>
+
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"dyuloon.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="选择1.若具有n个顶点的无向图采用邻接矩阵存储方法,该邻接矩阵一定为一个( D)。 A.一般矩阵 B.稀疏矩阵 C.对角矩阵 D.对称矩阵">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构考试题库">
+<meta property="og:url" content="https://dyuloon.github.io/2021/06/21/shujujiegou/index.html">
+<meta property="og:site_name" content="DyuLoon的博客">
+<meta property="og:description" content="选择1.若具有n个顶点的无向图采用邻接矩阵存储方法,该邻接矩阵一定为一个( D)。 A.一般矩阵 B.稀疏矩阵 C.对角矩阵 D.对称矩阵">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/clip_image002.jpg">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/01.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/02.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/03.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/04.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/05.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/06.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/07.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/08.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/09.png">
+<meta property="og:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/10.png">
+<meta property="article:published_time" content="2021-06-21T10:40:10.000Z">
+<meta property="article:modified_time" content="2024-12-18T02:14:00.556Z">
+<meta property="article:author" content="DyuLoon">
+<meta property="article:tag" content="考试题库">
+<meta property="article:tag" content="数据结构题库">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dyuloon.github.io/2021/06/21/shujujiegou/clip_image002.jpg">
+
+<link rel="canonical" href="https://dyuloon.github.io/2021/06/21/shujujiegou/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>数据结构考试题库 | DyuLoon的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DyuLoon的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-friendlink">
+
+    <a href="/friendlink/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+        <li class="menu-item menu-item-message">
+
+    <a href="/message/" rel="section"><i class="fa fa-book fa-fw"></i>留言</a>
+
+  </li>
+        <li class="menu-item menu-item-minigames">
+
+    <a href="/miniGames" rel="section"><i class="fa fa-gamepad fa-fw"></i>小游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-other">
+
+    <a href="/other" rel="section"><i class="fa fa-cubes fa-fw"></i>其他</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dyuloon.github.io/2021/06/21/shujujiegou/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/imgs/cat.jpg">
+      <meta itemprop="name" content="DyuLoon">
+      <meta itemprop="description" content="从现在开始，一定要不断努力">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DyuLoon的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据结构考试题库
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-06-21 18:40:10" itemprop="dateCreated datePublished" datetime="2021-06-21T18:40:10+08:00">2021-06-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-12-18 10:14:00" itemprop="dateModified" datetime="2024-12-18T10:14:00+08:00">2024-12-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%80%83%E8%AF%95%E7%9B%B8%E5%85%B3/" itemprop="url" rel="index"><span itemprop="name">考试相关</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/06/21/shujujiegou/" class="post-meta-item leancloud_visitors" data-flag-title="数据结构考试题库" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/21/shujujiegou/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/21/shujujiegou/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3><p>1.若具有n个顶点的无向图采用邻接矩阵存储方法,该邻接矩阵一定为一个( D)。</p>
+<p>A.一般矩阵</p>
+<p>B.稀疏矩阵</p>
+<p>C.对角矩阵</p>
+<p><u>D.对称矩阵</u></p>
+ <a id="more"></a>
+
+<hr/>
+
+<p>2.串的长度是指(B )。</p>
+<p>A.串中所含不同字母的个数</p>
+<p><u>B.串中所含字符的个数</u></p>
+<p>C.串中所含不同字符的个数</p>
+<p>D.串中所含非空格字符的个数</p>
+ <hr/>
+
+<p>3.在一个具有n个顶点的无向图中,要连通全部顶点至少需要( B)条边。</p>
+<p>A.n</p>
+<p><u>B.n-1</u></p>
+<p>C.n+1</p>
+<p>D.2n</p>
+ <hr/>
+
+<p>4.有向图的邻接表第i个链表中的边界点数目是第i个顶点的( C)。</p>
+<p>A.度数</p>
+<p>B.入度</p>
+<p><u>C.出度</u></p>
+<p>D.边数</p>
+ <hr/>
+
+<p>5.线性单链表的一个结点中有(A )个指针。</p>
+<p><u>A.1</u></p>
+<p>B.2</p>
+<p>C.3</p>
+<p>D.4</p>
+<hr/>
+
+<p> 6.对于一个具有N个顶点的图,若用邻接矩阵表示,则该矩阵的大小为( D)。</p>
+<p>A.N</p>
+<p>B.(N-1)2</p>
+<p>C.(N+1)2</p>
+<p><u>D.N2</u></p>
+<hr/>
+
+<p>7.以v1为起始结点对下图进行深度优先遍历,正确的遍历序列是(D)。</p>
+<p><img src="clip_image002.jpg" alt="img"></p>
+<p>A.v1,v2,v3,v4,v5,v6,v7</p>
+<p>B.v1,v2,v5,v4,v3,v7,v6</p>
+<p>C.v1,v2,v3,v4,v7,v5,v6</p>
+<p><u>D.v1,v2,v5,v6,v7,v3,v4</u></p>
+<hr/>
+
+<p>8.算法分析的目的是(C )。</p>
+<p>A.找出数据结构的合理性</p>
+<p>B.研究算法中的输入和输出的关系</p>
+<p><u>C.分析算法的效率以求改进</u></p>
+<p>D.分析算法的易懂性和文档性</p>
+<hr/>
+
+<p>9.用类C语言描写的算法( C)。</p>
+<p>A.可以直接在计算机上运行</p>
+<p><u>B.可以描述解决思想和基本框架</u></p>
+<p>C.不能改写成C语言程序</p>
+<p>D.与C语言无关</p>
+<hr/>
+
+<p>10.算法能正确实现预定功能的特性称为(A )。</p>
+<p><u>性</u></p>
+<p>B.可读性</p>
+<p>C.健壮性</p>
+<p>D.高效率</p>
+<hr/>
+
+<p>11.下列时间复杂度中最好的是( A)。</p>
+<p><u>A.O(1)</u></p>
+<p>B. O(n)</p>
+<p>C. O(log2n)</p>
+<p>D. O(n2)</p>
+<hr/>
+
+<p>12.线性表是( A)。</p>
+<p><u>A.一个有限序列,可以为空</u></p>
+<p>B.一个有限序列,不能为空</p>
+<p>C.一个无限序列,可以为空</p>
+<p>D.一个无限序列,不能为空</p>
+<hr/>
+
+<p>13.线性表中( C)只有一个直接前驱和一个直接后继。</p>
+<p>A.首元素</p>
+<p>B.尾元素</p>
+<p><u>C.中间元素</u></p>
+<p>D.所有元素</p>
+ <hr/>
+
+<p>14.若线性表采用顺序存储结构,每个元素占用4个存储单元,第1个元素的存储地址为100,则第15个元素的存储地址是(A )。</p>
+<p><u>A.154</u></p>
+<p>B.160</p>
+<p>C.415</p>
+<p>D.156</p>
+<hr/>
+
+<p>15.若长度为n的线性表采用顺序存储结构,在表的第i个位置插入一个数据元素,i的合法值应该是(B )。</p>
+<p>A.i&gt;0</p>
+<p><u>B.1≤i≤n+1</u></p>
+<p>C.i&lt;=n</p>
+<p>D.1≤i≤n</p>
+ <hr/>
+
+<p>16.若长度为n的非空线性表采用顺序存储结构,删除表中第i个数据元素,i的合法值应该是(D )。</p>
+<p>A.i&gt;0</p>
+<p>B.1≤i≤n+1</p>
+<p>C.i&lt;=n</p>
+<p><u>D.1≤i≤n</u></p>
+<hr/> 
+
+<p>17.若长度为n的非空线性表采用顺序存储结构,删除表中的第i个数据元素,需要移动的元素个数应该是(B )。</p>
+<p>A.n+i</p>
+<p><u>B.n-i</u></p>
+<p>C.n-i-1</p>
+<p>D.n-i+1</p>
+ <hr/>
+
+<p>18.若长度为n的非空线性表采用顺序存储结构,在表的第i个位置插入一个数据元素,需要移动的元素个数应该是(B )。</p>
+<p>A.n-i</p>
+<p><u>B.n-i+1</u></p>
+<p>C.n+i</p>
+<p>D.n-i-1</p>
+ <hr/>
+
+<p>19.若线性表采用顺序存储结构,每个元素占用4个存储单元,第1个元素的存储地址为100,则第12个元素的存储地址是( B)。</p>
+<p>A.112</p>
+<p><u>B.144</u></p>
+<p>C.148</p>
+<p>D.412</p>
+ <hr/>
+
+<p>20.线性表采用链式存储时,其地址( D)。</p>
+<p>A.必须是连续的</p>
+<p>B.部分地址必须是连续的</p>
+<p>C.一定是不连续的</p>
+<p><u>D.可以连续也可以不连续</u></p>
+ <hr/>
+
+<p>21.若带头结点的单链表head为空表,则满足的条件是(C )。</p>
+<p>A.head==NULL</p>
+<p>B.head—&gt;next!=NULL</p>
+<p><u>C.head—&gt;next==NULL</u></p>
+<p>D.head!=NULL</p>
+ <hr/>
+
+<p>22.若循环链表head非空,则其尾结点rear应满足的条件是( C)。</p>
+<p>A.rear—&gt;next==NULL</p>
+<p>B.rear ==NULL</p>
+<p><u>C.rear—&gt;next== head</u></p>
+<p>D.rear == head</p>
+ <hr/>
+
+<p>23.在一个非空单链表中,已知q所指结点是p所指结点的直接前驱结点,若再q和p之间插入结点s,则应执行操作是(A )。</p>
+<p><u>A.q—&gt;next=s;s—&gt;next=p;</u></p>
+<p>B.p—&gt;next=s;s—&gt;next=q;</p>
+<p>C.s—&gt;next=p—&gt;next;p—&gt;next=s;</p>
+<p>D.s—&gt;next=s—&gt;next; s—&gt;next=p;</p>
+ <hr/>
+
+<p>24.在一个非空单链表中,删除p所指结点的直接后继结点,则应依次执行的操作是( B)。</p>
+<p>A.r=p—&gt;next;p—&gt;next=r;free(r);</p>
+<p><u>B.r=p—&gt;next;p—&gt;next= r—&gt;next;free(r);</u></p>
+<p>C.r=p—&gt;next;p—&gt;next=r—&gt;next;free(p) ;</p>
+<p>D.p—&gt;next=p—&gt;next—&gt;next;free(p);</p>
+ <hr/>
+
+<p>25.栈是限定在( C)处进行插入或删除操作的线性表。</p>
+<p>A.端点</p>
+<p>B.栈底</p>
+<p><u>C.栈顶</u></p>
+<p>D.中间</p>
+ <hr/>
+
+<p>26.栈与一般线性表区别主要在(D )。</p>
+<p>A.元素个数</p>
+<p>B.元素类型</p>
+<p>C.逻辑结构</p>
+<p><u>D.插入、删除元素的位置</u></p>
+ <hr/>
+
+<p>27.若5个元素的出栈序列为1,2,3,4,5,则进栈的顺序可能是( C)。</p>
+<p>A.2,4,3,1,5</p>
+<p>B.3,1,4,2,5</p>
+<p><u>C.3,1,2,5,4</u></p>
+<p>D.2,3,1,5,4</p>
+ <hr/>
+
+<p>28.若栈采用顺序存储结构,删除栈中一个元素时,栈顶指针top的变化是(B )。</p>
+<p>A.不变</p>
+<p><u>B.–top</u></p>
+<p>C.++top</p>
+<p>D.top=0</p>
+ <hr/>
+
+<p>29.若栈采用顺序存储结构,向栈中插入一个元素,栈顶指针top的变化是( D)。</p>
+<p>A.不变</p>
+<p>B.top=0</p>
+<p>C.–top</p>
+<p><u>D.++top</u></p>
+ <hr/>
+
+<p>30.队列的特点是(B )。</p>
+<p>A.先进先出</p>
+<p><u>B.后进先出</u></p>
+<p>C.先进后出</p>
+<p>D.不进不出</p>
+ <hr/>
+
+<p>31.在循环队列中,若front和rear分别指向对头元素和队尾元素,则判断循环队列为空的条件是(A )。</p>
+<p><u>A.front=rear</u></p>
+<p>B.front=rear+1</p>
+<p>C.rear = front +1</p>
+<p>D.front=0</p>
+ <hr/>
+
+<p>32.若队列采用链式存储结构,front和rear分别指向对头元素和队尾元素,删除队列中的一个元素时,应执行的操作是: p = front;( D);free(p);</p>
+<p>A.front=p</p>
+<p>B.rear =p</p>
+<p>C.rear = p —&gt;next</p>
+<p><u>D.front = p—&gt;next</u></p>
+ <hr/>
+
+<p>33.若栈采用链式存储结构,栈顶指针为top,向栈中插入一个由p指向的新结点时,应执行的操作是( C);top=p;</p>
+<p>A.p=top</p>
+<p>B.top = p</p>
+<p><u>C.p—&gt;next =top</u></p>
+<p>D.top—&gt;next = p</p>
+ <hr/>
+
+<p>34.判断一个栈S(最多元素有M个)为满栈的条件是(D )。</p>
+<p>A.S—&gt;top==0</p>
+<p>B.S—&gt;top!=0</p>
+<p>C.S—&gt;top==M-1</p>
+<p><u>D.S—&gt;top==M</u></p>
+ <hr/>
+
+<p>35.用链表表示线性表的优点是(C )。</p>
+<p>A.便于随机存取</p>
+<p>B.花费的存储空间比顺序表少</p>
+<p><u>C.便于插入与删除</u></p>
+<p>D.数据元素的物理顺序与逻辑顺序相同</p>
+ <hr/>
+
+<p>36.对于一个10阶对称矩阵,若按行序存储下三角(包括对角线)的元素,则矩阵第6行3列的元素地址是一维数组中的第( D)个元素。</p>
+<p>A.9</p>
+<p>B.12</p>
+<p>C.13</p>
+<p><u>D.18</u></p>
+ <hr/>
+
+<p>37.广义表((a,b),c,d)的表头是(a,b),表尾是( D)。</p>
+<p>A. a</p>
+<p>B. d</p>
+<p>C.(a,b)</p>
+<p><u>D.(c,d)</u></p>
+ <hr/>
+
+<p>38.稀疏矩阵一般是指( C)。</p>
+<p>A.非零元素和零元素都较少</p>
+<p>B.非零元素较多</p>
+<p><u>C.零元素较多</u></p>
+<p>D.非零元素和零元素都比较多</p>
+ <hr/>
+
+<p>39.字符串通常采用的两种存储方式是( C)。</p>
+<p>A.散列存储和索引存储</p>
+<p>B.索引存储和链式存储</p>
+<p><u>C.顺序存储和链式存储</u></p>
+<p>D.散列存储和顺序存储</p>
+ <hr/>
+
+<p>40.具有线性结构的数据结构是( C)。</p>
+<p>A.树</p>
+<p>B.图</p>
+<p><u>C.栈和队列</u></p>
+<p>D.广义表</p>
+ <hr/>
+
+<p>41.下列叙述正确的是( A)。</p>
+<p><u>A.线性表是线性结构</u></p>
+<p>B.栈和队列是非线性结构</p>
+<p>C.线性链表是非线性结构</p>
+<p>D.二叉树是线性结构</p>
+ <hr/>
+
+<p>42.在一个具有n个顶点和e条边的有向图的邻接矩阵中, 表示边存在的元素个数为( C)。</p>
+<p>A.n</p>
+<p>B.n×e</p>
+<p><u>C.e</u></p>
+<p>D.2×e</p>
+ <hr/>
+
+<p>43.下列存储形式中,(C )不是树的存储形式。</p>
+<p>A.双亲表示法</p>
+<p>B.左子女右兄弟表示法</p>
+<p><u>C.广义表表示法</u></p>
+<p>D.顺序表示法</p>
+ <hr/>
+
+<p>44.按照二叉树的定义,具有3个结点的二叉树有( B)种形态。</p>
+<p>A.3</p>
+<p><u>B.4</u></p>
+<p>C.5</p>
+<p>D.6</p>
+ <hr/>
+
+<p>45.若一棵满二叉树有n个结点,m个叶子结点,深度为h,则下面关系中正确的是(B )。</p>
+<p>A.n=h+m</p>
+<p><u>B.n=2h-1</u></p>
+<p>C.m=n/2</p>
+<p>D.n=m+1</p>
+ <hr/>
+
+<p>46.在一棵二叉树上第4层的结点数最多为( C)。</p>
+<p>A.2</p>
+<p>B.4</p>
+<p><u>C.6</u></p>
+<p>D.8</p>
+ <hr/>
+
+<p>47.已知某二叉树的先序遍历序列为cedba,中序遍历序列为debac,则它的后序遍历序列为(C )。</p>
+<p>A.acbed</p>
+<p>B.deabc</p>
+<p><u>C.dabec</u></p>
+<p>D.decab</p>
+ <hr/>
+
+<p>48.在一棵完全二叉树中,若编号为i的结点有右孩子,则该结点的右孩子编号为(B )。</p>
+<p>A.2i</p>
+<p><u>B.2i+1</u></p>
+<p>C.2i-1</p>
+<p>D.i/2</p>
+ <hr/>
+
+<p>49.有权值分别为3,8,6,5,2的叶子结点生成一棵哈夫曼树,则它的带权路径长度为(D )。</p>
+<p>A.48</p>
+<p>B.72</p>
+<p>C.55</p>
+<p><u>D.53</u></p>
+ <hr/>
+
+<p>50.树形结构是数据元素之间存在一种(D )。</p>
+<p>A.一对一关系</p>
+<p>B.多对多关系</p>
+<p>C.多对一关系</p>
+<p><u>D.一对多关系</u></p>
+ <hr/>
+
+<h3 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h3><p>51.完全二叉树的某结点若无左孩子,则它必是叶子结点。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>52.链队列的出队操作总是需要修改尾指针。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>53.一个子串在包含它的主串中的位置是指子串的第一个字符在主串中首次出现的位置。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>54.栈和队列的存储方式,既可以是顺序方式,又可以是链式方式。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>55.有e条边的无向图,在邻接表中有e个结点。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>56.对任何数据结构而言,链式存储结构一定优于顺序存储结构。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>57.已知二叉树的前序遍历和后序遍历序列并不能唯一地确定这棵树,因为不知道树的根节点是哪一个。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>58.关键路径是时间结点网络中从源点到汇点的最长路径。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>59.栈和队列都是运算受限的线性表。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>60.对于不同的特殊矩阵应该采用不同的存储方式。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>61.十字链表是无向图的一种存储结构。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>62.二叉树的前序遍历中,任意结点均处在其子女结点之前。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>63.链表是采用链式存储结构存储的线性表,进行插入、删除操作时,在链表中比在顺序存储结构中效率高。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>64.由树转换成二叉树,其根节点的右子树总是空的。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>65.AOE网中一定只有一条关键路径。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>66.顺序存储结构的主要缺点是不利于插入或删除。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>67.队列是一种插入与删除操作分别在表的两端进行的线性表,是一种先进后出型结构。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>68.满二叉树也是完全二叉树。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>69.线性表的特点是每个元素都有一个前驱和一个后继。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>70.循环队列的引入,目的是为了克服假溢出。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>71.二叉树只能用二叉链表表示。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>72.循环链表不是线性表。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>73.已知指针P指向链表L中某结点,执行语句P=P-&gt;next不会删除该链表中结点。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>74.任何有向网络(AOV网络)拓扑排序的结果是唯一的。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>75.顺序存储方式只能用于存储线性结构。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>76.有回路的图不能进行拓扑排序。（ × ）</p>
+<hr/>
+
+
+
+<p>77.在链栈上进行进栈操作时,不需判断栈满。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>78.如果n个顶点的无向图有n条边,则图中肯定有回路。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>79.哈夫曼树中不存在度为1的结点。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>80.有向图的邻接表和逆邻接表中的结点数肯定是相同的。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>81.稀疏矩阵就是矩阵的元素很少。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>82.单链表中的头结点就是单链表的第一个结点。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>83.线性表的逻辑顺序总是与物理顺序一致。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>84.顺序表和一维数组一样,都可以按下标随机(或直接)访问。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>85.对稀疏矩阵进行压缩存储是为了节省存储空间。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>86.对二叉排序树进行中根遍历,可以得到结点的有序序列。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>87.在线性表中删除中间的结点时,只需将被删除结点释放。（ × ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>88.顺序查找法适用于存储结构为顺序或链接存储的线性表。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>89.线性表若采用链式存储表示,则在删除时不需要移动元素。（ √ ）</p>
+<hr/>
+
+
+
+
+
+
+
+<p>90.采用不同的遍历方法,所得到的无向图的生成树总是相同的。（ × ）</p>
+<hr/>
+
+
+
+<h3 id="问答题"><a href="#问答题" class="headerlink" title="问答题"></a>问答题</h3><p>91.已知二叉树形态，请分别写出该二叉树的先序、中序和后序访问序列。</p>
+<p><img src="01.png" alt="img"></p>
+<p>答案：</p>
+<p>先序遍历序列为：ABDGICEHJKF</p>
+<p>中序遍历序列为：DIGBAJEHKCF</p>
+<p>后序遍历序列为：IGDBKJHEFCA</p>
+<hr/>
+
+
+<p>92.对于图，所示的有向图，试画出相应的邻接表。答题说明：链表的表示形式：顶点A-&gt;2-&gt;9-&gt;∧。</p>
+<p><img src="02.png" alt="img"></p>
+<p>答案：</p>
+<p><img src="03.png" alt="img"></p>
+<hr/>
+
+
+<p>93.设一个二叉树的先序序列是：ABDFCEGH，中序序列是：BFDAGEHC，请画出这课二叉树，并写出该二叉树的后序序列。</p>
+<p>答案：</p>
+<p><img src="04.png" alt="img"></p>
+<p>后序序列：FDBGHECA</p>
+<hr/>
+
+<p>94..已知一个不带头结点的单链表list，设计一个算法void DelMax(LinkList *list)，删除链表中数据域值最大的那个结点。</p>
+<p>答案：</p>
+<p>void DelMax(LinkList *list)</p>
+<p>{ Node *p,*q,*r,*s; </p>
+<p>q=*list; p=list-&gt;next; </p>
+<p>r=*list; </p>
+<p>while(p!=NULL) { </p>
+<p>if(p-&gt;data&gt;q-&gt;data) </p>
+<p>{ q=p;//q当前最大值结点</p>
+<p> s=r;//当前最大结点前驱 }</p>
+<p> r=p; </p>
+<p>p=p-&gt;next; </p>
+<p>}</p>
+<p> if(q==*list) *list=(*list)-&gt;next; </p>
+<p>else s-&gt;next=q-&gt;next; </p>
+<p>free(q);</p>
+<p>}</p>
+ <hr/>
+
+<p>95.对于图所示的有向图，试画出相应的邻接矩阵。</p>
+<p><img src="05.png" alt="img"></p>
+<p>答案：</p>
+<p><img src="06.png" alt="img"></p>
+ <hr/>
+
+<p>96.根据数据元素之间的不同关系,数据的逻辑结构包括集合结构、(_______)、树形结构和网状结构(图状结构)。</p>
+<p>答案： 线性结构</p>
+ <hr/>
+
+
+
+<p>97.数据的存储结构被分为顺序存储结构和(_______)。</p>
+<p>答案：链式存储结构</p>
+ <hr/>
+
+
+
+<p>98.数据结构按逻辑结构可分为两大类,分别是(_______)和非线性结构。</p>
+<p>答案：线性结构</p>
+<hr/>
+
+
+<p>99.算法的五个重要特性是有限性、(_______)、可行性、输入和输出。</p>
+<p>答案：确定性</p>
+ <hr/>
+
+
+
+<p>100.评价算法性能优劣的两个重要指标是(_______)和空间复杂度。</p>
+<p>答案：时间复杂度</p>
+ <hr/>
+
+
+
+<p>101.在程序设计中,通常采用(_______)来描述线性表的顺序存储结构。</p>
+<p>答案：数组</p>
+<hr/>
+
+
+<p>102.组成串的数据元素只能是(_______)。</p>
+<p>答案： 字符</p>
+<hr/>
+
+
+<p>103.表示图的两种常用存储结构为(_______)和邻接表。</p>
+<p>答案：邻接矩阵</p>
+ <hr/>
+
+
+
+<p>104.线性表的链式存储结构主要包括( 单链表 )、循环链表和双向链表三种形式。</p>
+<hr/>
+
+<p>105.若只需对线性表较少进行插入和删除操作,则该线性表宜采用( 顺序 )存储结构。</p>
+ <hr/>
+
+<p>106.若只需对线性表频繁地进行插入和删除操作,则该线性表宜采用(_______)存储结构。</p>
+<p>答案：链式</p>
+ <hr/>
+
+
+
+<p>107.栈和队列的逻辑结构都是(_______)结构。</p>
+<p>答案：线性</p>
+<hr/>
+
+
+<p>108.队列的插入操作在(_______)进行。</p>
+<p>答案：队尾</p>
+<hr/>
+109.栈又称为后进先出表,队列又称为( 先进先出 )表。
+
+
+
+<hr/>
+
+
+<p>110.已知顺序栈s,在对s进行进栈操作之前要先判断(_______)。</p>
+<p>答案：栈满</p>
+ <hr/>
+
+<p>111.已知顺序栈s,在对s进行出栈操作之前要先判断(_______)。</p>
+<p>答案：栈空</p>
+<hr/>
+
+
+<p>112.以折半查找方法在一个查找表上进行查找时,该查找表必须组织称顺序存储的(_______)表。</p>
+<p>答案：有序</p>
+ <hr/>
+
+<p>113.在一个稀疏矩阵的三元组表中,每个非零元素对应的三元组包括行号、列号和(_______)。</p>
+<p>答案：元素值</p>
+ <hr/>
+
+
+
+<p>114.稀疏矩阵常用的压缩存储方法有两种:分别是三元组和(_______)存储。</p>
+<p>答案：十字链表</p>
+ <hr/>
+
+
+
+<p>115.HL为带头结点的单链表的表头指针,判断链表为空的条件是(_______)。</p>
+<p>答案：HL-&gt;nex==NULL</p>
+<hr/>
+116.在一棵树中,(_______)结点没有双亲。
+
+<p>答案：根</p>
+<hr/>
+
+
+<p>117.深度为5的满二叉树的结点个数为(30),叶子结点个数为16。</p>
+ <hr/>
+
+<p>118.若具有n个结点的二叉树采用二叉链表存储结构,则该链表中有( 2n )个指针域。</p>
+ <hr/>
+
+
+
+<p>119.二叉树的链式存储结构有(_______)和三叉链表。</p>
+<p>答案：二叉链表</p>
+ <hr/>
+
+<p>120.线索二叉树中,每个结点的空的左孩子指针用于保存某种遍历次序下该结点的(_______)地址。</p>
+<p>答案：前驱结点</p>
+ <hr/>
+
+
+
+<p>121.哈夫曼树又称为(最优二叉树),是相同叶子节点所构成的二叉树中带权路径长度WPL最短的二叉树。</p>
+ <hr/>
+
+<p>122.有向图的常用存储结构有( 邻接矩阵 )、邻接表和十字链表。</p>
+ <hr/>
+
+
+
+<p>123.在表示有向图的邻接矩阵中,第i行中非零元素的个数等于顶点的(_______)。</p>
+<p>答案：出度</p>
+ <hr/>
+
+<p>124.在表示有向图的邻接矩阵中,第i列中非零元素的个数等于顶点的(_______)。</p>
+<p>答案：入度</p>
+ <hr/>
+
+
+
+<p>125.在无向图G的邻接矩阵A中,若A[i][j]等于1,则A[j][i]等于( 1 )。</p>
+ <hr/>
+
+<p>126.若无向图中有m条边,则表示该表的邻接表中有(_______)个结点。</p>
+<p>答案：2m</p>
+ <hr/>
+
+
+
+<p>127.图的深度优先遍历算法类似于树的(_______)遍历。</p>
+<p>答案：先根</p>
+ <hr/>
+
+
+
+<p>128.图的遍历通常有两种:广度优先遍历( 深度优先 )遍历。</p>
+ <hr/>
+
+
+
+<p>129.一个有n个顶点的有向完全图的弧的数目为(_______)。</p>
+<p>答案：n(n-1)</p>
+ <hr/>
+
+<p>130.普里姆算法和克鲁斯卡尔算法均用于构造( 最小生成树 )。</p>
+ <hr/>
+
+<p>131.若一个连通图中每个边上的权值均不同,则得到的最小生成树是( 唯一 )(唯一/不唯一)的。</p>
+ <hr/>
+
+<p>132.普通树转换成二叉树,一定没有(_______)孩子(子树)。</p>
+<p>答案：右</p>
+ <hr/>
+
+<p>133.在二叉树转换成树或森林中,一颗具有左右孩子的二叉树,会转换成(_______)。</p>
+<p>答案：森林</p>
+ <hr/>
+
+<p>134.设某无向图G中有n个顶点,用邻接矩阵A作为该图的存储结构,则顶点i和顶点j互为邻接点的条件是设某无向图G中有n个顶点,用邻接矩阵A作为该图的存储结构,则顶点i和顶点j互为邻接点的条件是A[j][i]= ( 1 )。</p>
+ <hr/>
+
+<ol start="135">
+<li>已知一个无向图,在该图的最小生成树中,各边的权值之和为(_______)。</li>
+</ol>
+<p><img src="07.png" alt="img"></p>
+<p>答案： 20</p>
+ <hr/>
+
+
+
+<p>136.已知稀疏矩阵M，画出对应的三元组表。</p>
+<p><img src="08.png" alt="img"></p>
+ <hr/>
+
+<p>137.有如下无向图，请写出从顶点A出发进行深度优先遍历和广度优先遍历得到的顶点序列。</p>
+<p><img src="09.png" alt="img"></p>
+<p>答案：</p>
+<p>深度优先遍历序列为：ABDFEGC</p>
+<p>广度优先遍历序列为：ABCDEFG</p>
+ <hr/>
+
+
+
+<p>138.给定权值W={12,4,5,6,1,2}，试构造出相应的哈夫曼树，并计算其带权路径长度WPL。</p>
+<p>答案：</p>
+<p><img src="10.png" alt="img"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%80%83%E8%AF%95%E9%A2%98%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 考试题库</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%A2%98%E5%BA%93/" rel="tag"><i class="fa fa-tag"></i> 数据结构题库</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/04/jsp-notes-05-session-login/" rel="prev" title="JSP - session - session登陆获取cookie实例">
+      <i class="fa fa-chevron-left"></i> JSP - session - session登陆获取cookie实例
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/08/31/SoftwareTest-day01/" rel="next" title="软件测试-第一天">
+      软件测试-第一天 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9"><span class="nav-number">1.</span> <span class="nav-text">选择</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD"><span class="nav-number">2.</span> <span class="nav-text">判断</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E7%AD%94%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">问答题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="DyuLoon"
+      src="/imgs/cat.jpg">
+  <p class="site-author-name" itemprop="name">DyuLoon</p>
+  <div class="site-description" itemprop="description">从现在开始，一定要不断努力</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">54</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/dyuloon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;dyuloon" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2189925681@qq.com" title="E-Mail → mailto:2189925681@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/74103225" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;74103225" rel="noopener" target="_blank"><i class="fa fa-tv fa-fw"></i>bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/6481278726/profile?rightmod=1&wvr=6&mod=personinfo" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;6481278726&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://user.qzone.qq.com/2189925681" title="QQ → https:&#x2F;&#x2F;user.qzone.qq.com&#x2F;2189925681" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DyuLoon</span>
+</div>
+
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>  
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<br><span id="busuanzi_container_site_uv">本站访客数<span id="busuanzi_value_site_uv"></span>人</span>
+
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("12/09/2020");//此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'FGmPDAgxFQ57dgkJYkzLf2oO-MdYXbMMI',
+      appKey     : 'QDURvlpgsx2E8seSNfucz1AS',
+      placeholder: "快，留个言再走吧",
+      avatar     : 'robohash',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
